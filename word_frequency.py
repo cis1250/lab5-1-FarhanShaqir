@@ -33,6 +33,7 @@ def get_sentence():
 
 def calculate_frequencies(sentence):
     sentence = sentence[:-1].lower()
+    sentence = re.sub(r'[^\w\s]', '', sentence)
     words_in_sentence = sentence.split()
     words = []
     frequencies = []
